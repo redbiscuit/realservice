@@ -47,10 +47,10 @@ public class realestate extends HttpServlet {
 //            out.println("</head>");
 //            out.println("<body bgcolor=\"white\">");
 //            out.println("<center>");
-            String url="jdbc:mysql://127.0.0.1:3333/realestate";
+            String url="jdbc:mysql://54.255.202.138:3306/founderdb";
             try{
                 Class.forName("com.mysql.jdbc.Driver");
-                conn=DriverManager.getConnection(url,"root","asdfasdf1");
+                conn=DriverManager.getConnection(url,"founderc","ZAQ!2bgm");
                 stmt=conn.createStatement();
                 String sql = null;
                 if(reals.equals("houses_cn")){
@@ -58,23 +58,23 @@ public class realestate extends HttpServlet {
                 }else if(reals.equals("houses_en")){
 
                 }else if(reals.equals("news_cn")) {
-                    sql = "SELECT id,type,name,keyword,sintro,detail,img,img_d,display FROM realestate.houses Where type='News' and enable='1' order by created desc";
+                    sql = "SELECT id,type,name,keyword,sintro,detail,img,img_d,display FROM houses Where type='News' and enable='1' order by created desc";
                 }else if(reals.equals("news_en")){
 
                 }else if(reals.equals("house_cn")){
-                    sql = "SELECT id,Type,Name,Keyword,S_Intro,Intro,Detail,Fac,Price,Img,Img_D,HouseMap,Date FROM realestate.house Where Type='Houses' AND id = "+id;
+                    sql = "SELECT id,Type,Name,Keyword,S_Intro,Intro,Detail,Fac,Price,Img,Img_D,HouseMap,Date FROM house Where Type='Houses' AND id = "+id;
                 }else if(reals.equals("house_en")){
-                    sql = "SELECT id,Type,EN_Name,EN_Keyword,EN_S_Intro,EN_Intro,EN_Detail,EN_Fac,Price,Img,Img_D,HouseMap,Date FROM realestate.house Where Type='Houses' and id = "+id;
+                    sql = "SELECT id,Type,EN_Name,EN_Keyword,EN_S_Intro,EN_Intro,EN_Detail,EN_Fac,Price,Img,Img_D,HouseMap,Date FROM house Where Type='Houses' and id = "+id;
                 }else if(reals.equals("new_cn")){
-                    sql = "SELECT id,Type,Name,Keyword,S_Intro,Img FROM realestate.house Where Type='News' and id="+id;
+                    sql = "SELECT id,Type,Name,Keyword,S_Intro,Img FROM house Where Type='News' and id="+id;
                 }else if(reals.equals("new_en")) {
-                    sql = "SELECT id,Type,EN_Name,EN_Keyword,EN_S_Intro,Img FROM realestate.house Where Type='News' and id=" + id;
+                    sql = "SELECT id,Type,EN_Name,EN_Keyword,EN_S_Intro,Img FROM house Where Type='News' and id=" + id;
                 }else if(reals.equals("others_cn")){
-                    sql = "SELECT id,Type,Name,Keyword,S_Intro,Img FROM realestate.house Where Type='Others'";
+                    sql = "SELECT id,Type,Name,Keyword,S_Intro,Img FROM house Where Type='Others'";
                 }else if(reals.equals("others_en")){
-                    sql = "SELECT id,Type,EN_Name,EN_Keyword,EN_S_Intro,Img FROM realestate.house Where Type='Others'";
+                    sql = "SELECT id,Type,EN_Name,EN_Keyword,EN_S_Intro,Img FROM house Where Type='Others'";
                 }else if(reals.equals("contactus")){
-                    sql="SELECT * FROM realestate.contactus";
+                    sql="SELECT * FROM contactus";
                 }
 
                 rs=stmt.executeQuery(sql);

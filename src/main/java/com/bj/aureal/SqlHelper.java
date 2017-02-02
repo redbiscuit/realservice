@@ -11,7 +11,7 @@ public class SqlHelper
 
     private static String driverName="com.mysql.jdbc.Driver";
 
-    private static String dbURL="jdbc:mysql://127.0.0.1:3306/founderdb";
+    private static String dbURL="jdbc:mysql://54.255.202.138:3306/founderdb";
 
     private static String userName="founderc";
 
