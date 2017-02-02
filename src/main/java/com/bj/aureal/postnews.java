@@ -19,9 +19,9 @@ public class postnews extends HttpServlet {
 
         ServletConfig config=null;                        //定义一个ServletConfig对象
         private String driverName="com.mysql.jdbc.Driver";                    //定义私有字符串常量并初始化
-        private String username="root";                    //定义的数据库用户名
-        private String password="asdfasdf1";                    //定义的数据库连接密码
-        private String dbName="realestate";                        //定义的数据库名
+    private String username="founderc";                    //定义的数据库用户名
+    private String password="ZAQ!2bgm";                    //定义的数据库连接密码
+    private String dbName="founderdb";                        //定义的数据库名
         private Connection conn;                        //初始化连接
         private Statement stmt;                        //初始化数据库操作
         ResultSet rs=null;                            //初始化结果集

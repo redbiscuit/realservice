@@ -11,11 +11,11 @@ public class SqlHelper
 
     private static String driverName="com.mysql.jdbc.Driver";
 
-    private static String dbURL="jdbc:mysql://127.0.0.1:3333/realestate";
+    private static String dbURL="jdbc:mysql://127.0.0.1:3306/founderdb";
 
-    private static String userName="root";
+    private static String userName="founderc";
 
-    private static String userPwd="asdfasdf1";
+    private static String userPwd="ZAQ!2bgm";
 
 
     private static Connection  getCoonection()
