@@ -34,7 +34,7 @@ public class updateitem extends HttpServlet {
             req.setCharacterEncoding("UTF-8");
             resp.setCharacterEncoding("UTF-8");
             PrintWriter out = resp.getWriter();
-            resp.setContentType("text/html;charset=UTF-8");
+            resp.setContentType("application/Json;charset=UTF-8");
             System.out.println("正在处理请求... ");
             String ids= req.getParameter("idx");
       //      String type= req.getParameter("type");

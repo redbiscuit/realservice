@@ -56,7 +56,8 @@ public class mailadapter extends HttpServlet {
 //            out.println("</head>");
 //            out.println("<body bgcolor=\"white\">");
 //            out.println("<center>");
-            String url="jdbc:mysql://54.255.202.138:3306/founderdb";
+            String url="jdbc:mysql://127.0.0.1:3306/founderdb";
+        //    String url="jdbc:mysql://54.255.202.138:3306/founderdb";
             try{
                 Class.forName("com.mysql.jdbc.Driver");
                 conn=DriverManager.getConnection(url,"founderc","ZAQ!2bgm");

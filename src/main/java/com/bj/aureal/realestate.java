@@ -35,6 +35,8 @@ public class realestate extends HttpServlet {
             dbName=config.getInitParameter("dbName");    //获取要连接的数据库
         }
         public void doGet(HttpServletRequest req,HttpServletResponse resp)throws IOException,ServletException{
+            req.setCharacterEncoding("UTF-8");
+            resp.setCharacterEncoding("UTF-8");
 
             String reals = req.getParameter("method");
             String id = req.getParameter("id");
@@ -47,7 +49,8 @@ public class realestate extends HttpServlet {
 //            out.println("</head>");
 //            out.println("<body bgcolor=\"white\">");
 //            out.println("<center>");
-            String url="jdbc:mysql://54.255.202.138:3306/founderdb";
+            String url="jdbc:mysql://127.0.0.1:3306/founderdb";
+      //      String url="jdbc:mysql://54.255.202.138:3306/founderdb";
             try{
                 Class.forName("com.mysql.jdbc.Driver");
                 conn=DriverManager.getConnection(url,"founderc","ZAQ!2bgm");
