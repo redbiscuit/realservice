@@ -109,6 +109,8 @@ public class fileUpload extends HttpServlet {
         }
 
         File uploadFile = new File(filePath + "/" + filename);
+        uploadFile.setExecutable(true);
+        uploadFile.setWritable(true,false);
         item.write(uploadFile);
 
     }

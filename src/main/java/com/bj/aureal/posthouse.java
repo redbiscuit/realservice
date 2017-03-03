@@ -33,8 +33,8 @@ public class posthouse extends HttpServlet {
         public void doPost(HttpServletRequest req,HttpServletResponse resp)throws IOException,ServletException{
             req.setCharacterEncoding("UTF-8");
             resp.setCharacterEncoding("UTF-8");
+            resp.setContentType("application/Json;charset=UTF-8");
             PrintWriter out = resp.getWriter();
-            resp.setContentType("text/html;charset=UTF-8");
             System.out.println("正在处理请求... ");
             String id = req.getParameter("id");
             String name_cn= req.getParameter("name_cn");
